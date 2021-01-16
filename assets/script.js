@@ -1,12 +1,11 @@
-$(document).ready(function() {
-    function dayPlanner() {
-
+function dayPlanner() {
+    $(document).ready(function() {
         var momentVar = moment().format('dddd, MMMM Do, YYYY   h:mma');
         var workHours = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm",
             "5pm"
         ]
 
-        //display current date
+        // display current day
         function currentDay() {
             var currentDay = $("#currentDay").text(momentVar);
             return currentDay;
@@ -17,9 +16,7 @@ $(document).ready(function() {
         var row;
         var timeCol;
 
-
         for (i = 0; i < workHours.length; i++) {
-
             var row = $("<div>").addClass("row");
             var timeCol = $("<text-area>").text(workHours[i]).addClass("hour");
             var inputCol = $("<input>").attr("placeholder", "").addClass("hourInput time-block");
@@ -46,6 +43,8 @@ $(document).ready(function() {
         }
         addIdToSaveBtn();
 
+        // var saveBtnId = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
         var saveBtnId1 = $("#saveBtn-id1");
         var saveBtnId2 = $("#saveBtn-id2");
         var saveBtnId3 = $("#saveBtn-id3");
@@ -66,7 +65,26 @@ $(document).ready(function() {
         var entryInput8 = $("#inputField-id8");
         var entryInput9 = $("#inputField-id9");
 
-        // save user input to local storage upon save-button click
+
+        // display colors for past, present, future events
+
+        var nowHours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+        var inputFieldIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        var now = new Date().getHours();
+
+        for (var i = 0; i < nowHours.length; i++) {
+            if (now > nowHours[i]) {
+                $("#inputField-id" + inputFieldIndex[i]).addClass("past");
+            } else if (now >= nowHours[i] && now < nowHours[i] + 1) {
+                $("#inputField-id" + inputFieldIndex[i]).addClass("present");
+            } else if (now < nowHours[i]) {
+                $("#inputField-id" + inputFieldIndex[i]).addClass("future");
+            }
+        };
+
+        // click events get input and save to local storage
+
         $(saveBtnId1).on("click", function(event) {
             event.preventDefault();
             var entryInput1 = $("#inputField-id1").val().trim();
@@ -138,88 +156,6 @@ $(document).ready(function() {
         });
         var savedInput9 = (localStorage.getItem("entry9"));
         entryInput9.val(savedInput9);
-
-        // display colors for past, present, future events
-        var now = new Date().getHours();
-        if (now > 8) {
-            $("#inputField-id0").addClass("past");
-        } else if (now >= 8 && now < 9) {
-            $("#inputField-id0").addClass("present");
-        } else if (now < 8) {
-            $("#inputField-id0").addClass("future");
-        }
-
-        if (now > 9) {
-            $("#inputField-id1").addClass("past");
-        } else if (now >= 9 && now < 10) {
-            $("#inputField-id1").addClass("present");
-        } else if (now < 9) {
-            $("#inputField-id1").addClass("future");
-        }
-
-        if (now > 10) {
-            $("#inputField-id2").addClass("past");
-        } else if (now >= 10 && now < 11) {
-            $("#inputField-id2").addClass("present");
-        } else if (now < 10) {
-            $("#inputField-id2").addClass("future");
-        }
-
-        if (now > 11) {
-            $("#inputField-id3").addClass("past");
-        } else if (now >= 11 && now < 12) {
-            $("#inputField-id3").addClass("present");
-        } else if (now < 11) {
-            $("#inputField-id3").addClass("future");
-        }
-
-        if (now > 12) {
-            $("#inputField-id4").addClass("past");
-        } else if (now >= 12 && now < 13) {
-            $("#inputField-id4").addClass("present");
-        } else if (now < 12) {
-            $("#inputField-id4").addClass("future");
-        }
-
-        if (now > 13) {
-            $("#inputField-id5").addClass("past");
-        } else if (now >= 13 && now < 14) {
-            $("#inputField-id5").addClass("present");
-        } else if (now < 13) {
-            $("#inputField-id5").addClass("future");
-        }
-
-        if (now > 14) {
-            $("#inputField-id6").addClass("past");
-        } else if (now >= 14 && now < 15) {
-            $("#inputField-id6").addClass("present");
-        } else if (now < 14) {
-            $("#inputField-id6").addClass("future");
-        }
-
-        if (now > 15) {
-            $("#inputField-id7").addClass("past");
-        } else if (now >= 15 && now < 16) {
-            $("#inputField-id7").addClass("present");
-        } else if (now < 15) {
-            $("#inputField-id7").addClass("future");
-        }
-
-        if (now > 16) {
-            $("#inputField-id8").addClass("past");
-        } else if (now >= 16 && now < 17) {
-            $("#inputField-id8").addClass("present");
-        } else if (now < 16) {
-            $("#inputField-id8").addClass("future");
-        }
-
-        if (now > 17) {
-            $("#inputField-id9").addClass("past");
-        } else if (now >= 17 && now < 18) {
-            $("#inputField-id9").addClass("present");
-        } else if (now < 17) {
-            $("#inputField-id9").addClass("future");
-        }
-    }
-    dayPlanner();
-});
+    });
+}
+dayPlanner();
