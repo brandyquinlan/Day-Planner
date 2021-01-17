@@ -40,4 +40,4 @@ The repo is located here: https://github.com/brandyquinlan/HW05_Day_Planner/
 ```
 
 ## Screenshots of Day Planner
-![Screenshot](/../HW05_Screenshots-for-readme.png)
+![Screenshot](/assets/images/HW05_Screenshots-for-readme.png)
