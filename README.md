@@ -33,11 +33,8 @@ WHEN I refresh the page
 ```
 
 ## URL and Repo Locations
-
-```
-The url for the site is: https://brandyquinlan.github.io/HW05_Day_Planner/
-The repo is located here: https://github.com/brandyquinlan/HW05_Day_Planner/
-```
+The url for the site is: (https://brandyquinlan.github.io/HW05_Day_Planner/)<br>
+The repo is located here: (https://github.com/brandyquinlan/HW05_Day_Planner/)
 
 ## Screenshots of Day Planner
 ![Screenshot](/assets/images/HW05_Screenshots-for-readme.png)
