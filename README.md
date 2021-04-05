@@ -37,7 +37,7 @@ The url for the site is: (https://brandyquinlan.github.io/Day-Planner/)<br>
 The repo is located here: (https://github.com/brandyquinlan/Day-Planner/)
 
 ## Screenshots of Day Planner
-![Screenshot](/assets/images/HW05_Screenshots-for-readme.png)
+![Screenshot](/assets/images/Screenshots-for-readme.png)
 
 ## Questions
 Please contact me with questions:
