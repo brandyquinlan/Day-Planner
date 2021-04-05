@@ -1,10 +1,10 @@
-# HW05_Day_Planner
+# Day-Planner
 
 ## The Task
 
 This project involved creating a simple calendar application that allows a user to save events for each hour of the day. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
-The [Moment.js](https://momentjs.com/)  library is used to work with dates and times. `Moment.js`
+The [Moment.js](https://momentjs.com/) library is used to work with dates and times. `Moment.js`
 
 ## User Story
 
@@ -33,8 +33,8 @@ WHEN I refresh the page
 ```
 
 ## URL and Repo Locations
-The url for the site is: (https://brandyquinlan.github.io/HW05_Day_Planner/)<br>
-The repo is located here: (https://github.com/brandyquinlan/HW05_Day_Planner/)
+The url for the site is: (https://brandyquinlan.github.io/Day-Planner/)<br>
+The repo is located here: (https://github.com/brandyquinlan/Day-Planner/)
 
 ## Screenshots of Day Planner
 ![Screenshot](/assets/images/HW05_Screenshots-for-readme.png)
