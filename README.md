@@ -38,3 +38,12 @@ The repo is located here: (https://github.com/brandyquinlan/Day-Planner/)
 
 ## Screenshots of Day Planner
 ![Screenshot](/assets/images/HW05_Screenshots-for-readme.png)
+
+## Questions
+Please contact me with questions:
+
+Brandy Quinlan
+<br>
+Email: <brandyquinlan@gmail.com>
+<br>
+Github: [https://github.com/brandyquinlan/](https://github.com/brandyquinlan/)
